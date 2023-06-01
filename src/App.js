@@ -137,7 +137,7 @@ function App(){
 
     <div className={"App "+theme}>
       <Header setTheme={setTheme} theme={theme}>
-          Touch Typing Test 
+          Touch Typing Test(chaabi assignment)
       </Header>
       
       <div className=" has-text-centered"><span className="is-size-2">Time left: </span><span className="is-size-1 has-text-primary">{secTime}</span></div>
