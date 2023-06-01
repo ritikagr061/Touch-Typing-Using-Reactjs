@@ -42,7 +42,7 @@ function App(){
     return arr;
   }
 
-  useEffect(()=>{if(status=="started") inputText.current.focus()},[status]);
+  useEffect(()=>{if(status==="started") inputText.current.focus()},[status]);
 
   useEffect(() => {
     localStorage.setItem('theme', JSON.stringify(theme));
@@ -120,13 +120,13 @@ function App(){
 
   function findCharClass(wordIndex,charIndex,charItself){
     
-    if(currChar&&wordIndex==currIndex&&charIndex==currCharIndex){
+    if(currChar&&wordIndex===currIndex&&charIndex===currCharIndex){
       if(charItself===currChar)
         return 'has-background-success';
       else
         return 'has-background-danger';
     }
-    else if(currIndex==wordIndex&&currCharIndex >= word[currIndex].length)
+    else if(currIndex===wordIndex&&currCharIndex >= word[currIndex].length)
       return 'has-background-danger';
     else
       return '';
@@ -135,7 +135,7 @@ function App(){
   
   return(
 
-    <div className={"App"+" "+theme}>
+    <div className={"App "+theme}>
       <Header setTheme={setTheme} theme={theme}>
           Touch Typing Test 
       </Header>
